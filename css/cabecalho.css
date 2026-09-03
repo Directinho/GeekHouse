@@ -17,10 +17,61 @@
     height: 48px;
 }
 
-.cabecalho_nav_item_link {
+.cabecalho_nav_item_link, .cabecalho_nav_item_link_sobre {
     font-size: 20px;
     line-height: 24px;
     text-decoration: none;
     color: var(--cor-links);
-    font-family: var(--fontetexto)
+    font-family: var(--fonte-texto)
+}
+.cabecalho_nav_list_item_input {
+    position: relative;
+}
+.cabecalho_nav_list_input {
+    height: 100%;
+    width: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    background-color: var(--cor-texto);
+    border-radius: 32px;
+    border: none;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: var(--fonte-texto);
+    color: var(--cor-links);
+}
+.lupa {
+    position: absolute;
+    right: 17.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho_nav_list {
+        grid-template-areas:
+        "logo sobre login perfil carrinho"
+        "input input input input input";
+        grid-template-columns: 1fr 2fr .5fr .5fr .5fr;
+
+    }
+    .cabecalho_logo {
+        grid-area: logo;
+        justify-self: center ;
+    }
+    .cabecalho_nav_list_item_link_sobre {
+        grid-area: sobre;
+    }
+    .cabecalho_nav_list_item_login {
+        grid-area: login;
+    }
+    .cabecalho_nav_list_item_link_carrinho {
+        grid-area: carrinho;
+    }
+    .cabecalho_nav_list_item_input{
+        grid-area: input;
+    }
 }
