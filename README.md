@@ -3,7 +3,7 @@
 
 # CSS Grid
 
-Página inicial da loja UseDev.
+Página inicial da loja GeekHouse.
 
 ## 🔨 Funcionalidades do projeto
 
